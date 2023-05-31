@@ -3,6 +3,8 @@ let height = 16;
 
 createGrid(width, height);
 
+
+
 //Create a grid with specified width and height
 function createGrid(w,h) {
     const grid = document.querySelector("#grid")
@@ -12,6 +14,7 @@ function createGrid(w,h) {
         for(let j = 0; j < w; j++){
             const square = document.createElement("div");
             square.classList.add("square");
+            square.addEventListener("mouseover", colorIn);
             row.appendChild(square);
         }
         grid.appendChild(row);
