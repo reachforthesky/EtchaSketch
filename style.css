@@ -1,0 +1,20 @@
+#grid {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.square {
+    width: 6%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+}
+
+.square:hover{
+    background-color: black;
+}
