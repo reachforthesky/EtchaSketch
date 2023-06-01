@@ -10,7 +10,7 @@ reset.addEventListener("click",resetAll);
 
 //Create a grid with specified width and height
 function createGrid(w,h) {
-    const grid = document.querySelector("#grid")
+    const grid = document.querySelector("#grid");
     for(let i = 0; i < h; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
@@ -25,6 +25,8 @@ function createGrid(w,h) {
     }
 }
 
+//colors in hovered square with random color,
+//or darkens if there is already a color
 function colorIn(event){
     const square = event.target;
     if(square.style.backgroundColor == ""){
@@ -44,12 +46,11 @@ function colorIn(event){
 }
 
 function resetAll() {
-    const squares = document.querySelectorAll(".square");
-    squares.forEach(resetSquare);
+    const squares = document.querySelectorAll(".row");
+    squares.forEach(clearRow);
 }
 
-function resetSquare(s) {
-    s.style.backgroundColor = "";
-    s.dataset.brightness = 100;
-    s.style.filter = "brightness(90)";
+function clearRow(r) {
+    const grid = document.querySelector("#grid");
+    grid
 }

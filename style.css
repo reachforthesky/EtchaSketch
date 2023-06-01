@@ -13,10 +13,11 @@
 }
 
 .square {
-    border: 1px solid black;
     flex-grow: 1;
 }
 
-.square:hover{
-    background-color: black;
+
+#bottom-box{
+    display: flex;
+    flex-direction: row;
 }
