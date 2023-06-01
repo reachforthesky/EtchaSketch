@@ -45,12 +45,21 @@ function colorIn(event){
     }
 }
 
+//resets the grid to have blank squares according to the
+//size input by the user
 function resetAll() {
-    const squares = document.querySelectorAll(".row");
-    squares.forEach(clearRow);
+    const rows = document.querySelectorAll(".row");
+    rows.forEach(clearRow);
+    const size = document.querySelector("#size");
+    sideSize = Math.min(size.value,100);
+    size.value = sideSize;
+    let h = sideSize;
+    let w = sideSize;
+    createGrid(w,h);
 }
 
+//removes a row from the grid
 function clearRow(r) {
     const grid = document.querySelector("#grid");
-    grid
+    grid.removeChild(r);
 }
